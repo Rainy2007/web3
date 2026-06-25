@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stellar Journey to Mastery | Web3 Portal</title>
+  <meta name="description" content="Embark on the Stellar Journey to Mastery challenge. Connect your Web3 wallet, explore missions, and navigate the blockchain frontier.">
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Particle Background & Nebulas -->
+  <div class="space-bg">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div class="nebula-1"></div>
+    <div class="nebula-2"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo-link">
+        <div class="logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 22H9L12 17L15 22H22L12 2Z" fill="url(#logo-grad)" stroke="currentColor" stroke-width="1"/>
+            <defs>
+              <linearGradient id="logo-grad" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00cec9"/>
+                <stop offset="1" stop-color="#6c5ce7"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="logo-text">STELLAR <span class="accent-text">JOURNEY</span></span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#features" class="nav-item">Voyage Phases</a>
+        <a href="https://stellar.org" target="_blank" class="nav-item">Stellar Network</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Connect button in nav (changes state when connected) -->
+        <button id="connect-btn-nav" class="btn btn-primary btn-nav">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 5H5C3.89 5 3 5.89 3 7V17C3 18.11 3.89 19 5 19H19C20.11 19 21 18.11 21 17V7C21 5.89 20.11 5 19 5M19 17H5V13H19V17M19 11H5V7H19V11M17 8.5C17 9.33 16.33 10 15.5 10C14.67 10 14 9.33 14 8.5C14 7.67 14.67 7 15.5 7C16.33 7 17 7.67 17 8.5Z"/>
+          </svg>
+          <span>Connect Wallet</span>
+        </button>
+        <div id="wallet-badge-nav" class="wallet-badge hidden">
+          <span id="wallet-network-nav" class="network-dot-indicator"></span>
+          <span id="wallet-address-nav" class="address-text">0x000...0000</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+    
+    <!-- UNCONNECTED VIEW (HERO PAGE) -->
+    <section id="unconnected-view" class="view-section hero-section">
+      <div class="hero-grid">
+        <div class="hero-text-content">
+          <div class="badge-glow">STELLAR CHALLENGE UPLINK ACTIVE</div>
+          <h1 class="hero-title">
+            Voyage to <span class="gradient-text">Web3 Mastery</span>
+          </h1>
+          <p class="hero-subtitle">
+            Embark on a galactic quest to master decentralized networks. Connect your Web3 wallet using MetaMask, establish your pilot credentials, and log your voyage metrics in real-time.
+          </p>
+          <div class="hero-actions">
+            <button id="connect-btn-hero" class="btn btn-primary btn-large btn-glow">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 5H5C3.89 5 3 5.89 3 7V17C3 18.11 3.89 19 5 19H19C20.11 19 21 18.11 21 17V7C21 5.89 20.11 5 19 5M19 17H5V13H19V17M19 11H5V7H19V11M17 8.5C17 9.33 16.33 10 15.5 10C14.67 10 14 9.33 14 8.5C14 7.67 14.67 7 15.5 7C16.33 7 17 7.67 17 8.5Z"/>
+              </svg>
+              <span>Initialize Uplink</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual-content">
+          <!-- Floating Portal Widget -->
+          <div class="cosmic-portal-container">
+            <div class="portal-orbit ring-1"></div>
+            <div class="portal-orbit ring-2"></div>
+            <div class="portal-orbit ring-3"></div>
+            <div class="portal-core">
+              <svg class="core-rocket" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C12 2 9 7 9 12C9 14.5 10 17 12 20C14 17 15 14.5 15 12C15 7 12 2 12 2Z" fill="url(#rocket-grad)"/>
+                <path d="M9 12H15M12 2V20M12 6C13.1 6 14 6.9 14 8C14 9.1 13.1 10 12 10C10.9 10 10 9.1 10 8C10 6.9 10.9 6 12 6Z" stroke="white" stroke-width="0.5"/>
+                <defs>
+                  <linearGradient id="rocket-grad" x1="12" y1="2" x2="12" y2="20" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00cec9"/>
+                    <stop offset="1" stop-color="#6c5ce7"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <!-- Interactive HUD overlay -->
+            <div class="hud-item hud-top">SYS: STABLE</div>
+            <div class="hud-item hud-left">ORBIT: LEO</div>
+            <div class="hud-item hud-right">LATENCY: 12ms</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECTED VIEW (PILOT CONSOLE) -->
+    <section id="connected-view" class="view-section dashboard-section hidden">
+      <div class="dashboard-header">
+        <div class="dashboard-title-area">
+          <span class="sub-header-badge">UPLINK ESTABLISHED</span>
+          <h2 class="dashboard-title">Pilot Console Dashboard</h2>
+        </div>
+        <button id="disconnect-btn-top" class="btn btn-secondary btn-small">
+          <span>Disconnect</span>
+        </button>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Card 1: Pilot Credentials (Wallet Info) -->
+        <div class="card glass-card card-credentials">
+          <div class="card-glow-effect"></div>
+          <div class="card-header">
+            <div class="card-icon-container">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 18V19C21 20.1 20.1 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.9 3.89 3 5 3H19C20.1 3 21 3.9 21 5V6H12C10.9 6 10 6.9 10 8V16C10 17.1 10.9 18 12 18H21M12 16H22V8H12V16M16 13.5C15.17 13.5 14.5 12.83 14.5 12C14.5 11.17 15.17 10.5 16 10.5C16.83 10.5 17.5 11.17 17.5 12C17.5 12.83 16.83 13.5 16 13.5Z"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Pilot Credentials</h3>
+          </div>
+          <div class="card-body">
+            <div class="info-group">
+              <span class="info-label">Active Node</span>
+              <div class="info-value-container">
+                <span id="info-network-dot" class="status-indicator"></span>
+                <span id="info-network" class="info-value">Searching...</span>
+              </div>
+            </div>
+            <div class="info-group">
+              <span class="info-label">Uplink Address</span>
+              <div class="info-value-container address-container">
+                <span id="info-address" class="info-value address-text">0x0000...0000</span>
+                <button id="copy-address-btn" class="btn-icon-only" title="Copy Address">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="info-group">
+              <span class="info-label">Clearance Level</span>
+              <span class="info-value highlight-cyan">Mastery Cadet Level I</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Core Fusion Power (Balance) -->
+        <div class="card glass-card card-balance">
+          <div class="card-glow-effect"></div>
+          <div class="card-header">
+            <div class="card-icon-container accent-cyan">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L1 21H23L12 2M12 6L19.8 19.5H4.2L12 6M12 8.75A1.25 1.25 0 0 0 10.75 10V15A1.25 1.25 0 0 0 13.25 15V10A1.25 1.25 0 0 0 12 8.75M12 16.25A1.25 1.25 0 1 0 12 18.75A1.25 1.25 0 0 0 12 16.25Z"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Core Energy</h3>
+          </div>
+          <div class="card-body balance-body">
+            <span class="balance-label">Current Balance</span>
+            <div class="balance-display">
+              <span id="info-balance" class="balance-value">0.0000</span>
+              <span id="balance-unit" class="balance-unit">ETH</span>
+            </div>
+            
+            <div class="fuel-tank-container">
+              <div class="fuel-tank-labels">
+                <span>Core Fuel Cell</span>
+                <span id="fuel-percentage">0%</span>
+              </div>
+              <div class="fuel-bar-outer">
+                <div id="fuel-bar-inner" class="fuel-bar-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Journey Log (Missions) -->
+        <div class="card glass-card card-missions">
+          <div class="card-glow-effect"></div>
+          <div class="card-header">
+            <div class="card-icon-container accent-purple">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20M16 11H8V13H16V11M16 15H8V17H16V15Z"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Voyage Missions</h3>
+          </div>
+          <div class="card-body">
+            <ul class="mission-list">
+              <li class="mission-item completed">
+                <div class="mission-checkbox">✓</div>
+                <div class="mission-details">
+                  <span class="mission-name">Establish Uplink</span>
+                  <span class="mission-status font-green">Completed (MetaMask connected)</span>
+                </div>
+              </li>
+              <li class="mission-item in-progress">
+                <div class="mission-checkbox">▶</div>
+                <div class="mission-details">
+                  <span class="mission-name">Fuel Core Thrusters</span>
+                  <span id="mission-fuel-status" class="mission-status">Requires > 0.01 ETH Balance</span>
+                </div>
+              </li>
+              <li class="mission-item locked" id="mission-jump-item">
+                <div class="mission-checkbox" id="mission-jump-checkbox">🔒</div>
+                <div class="mission-details">
+                  <span class="mission-name">Hyperspace Jump</span>
+                  <span id="mission-jump-status" class="mission-status text-muted">Locked (Fuel core to unlock)</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-footer-actions">
+        <button id="disconnect-btn-main" class="btn btn-secondary btn-large">
+          <span>Disconnect Portal Uplink</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- MISSION/FEATURES GRID (VISIBLE TO ALL) -->
+    <section id="features" class="features-section">
+      <h2 class="section-title">The Path to Web3 Mastery</h2>
+      <p class="section-subtitle">Navigate through critical phases to establish your status in the decentralized cosmos.</p>
+      
+      <div class="features-grid">
+        <div class="feature-card glass-card">
+          <div class="feature-badge">PHASE 01</div>
+          <h3 class="feature-title">Portal Gateway</h3>
+          <p class="feature-text">Connect your MetaMask Web3 wallet to generate your cryptographic coordinates and initiate telemetry with our network node.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-badge">PHASE 02</div>
+          <h3 class="feature-title">Telemetry & Balance</h3>
+          <p class="feature-text">Fetch real-time network states, balance data, and node details directly from the ledger. Monitor metrics via your Pilot Console dashboard.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-badge">PHASE 03</div>
+          <h3 class="feature-title">Mission Command</h3>
+          <p class="feature-text">Track your tasks and advance from Mastery Cadet to Supreme Commander as you complete blockchain interactions and challenges.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copyright">&copy; 2026 Stellar Journey to Mastery. Built for Stellar Voyage CADETS.</p>
+      <div class="footer-links">
+        <a href="https://stellar.org" target="_blank">Stellar Dev Hub</a>
+        <a href="https://metamask.io" target="_blank">MetaMask Portal</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- METAMASK WARNING MODAL -->
+  <div id="no-wallet-modal" class="modal-overlay hidden">
+    <div class="modal glass-card">
+      <button class="modal-close-btn" id="close-modal-btn">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon warning-icon">!</div>
+        <h3 class="modal-title">Web3 Portal Missing</h3>
+      </div>
+      <div class="modal-body">
+        <p>No Ethereum/Web3 compatible provider was detected in your current cockpit.</p>
+        <p>To connect your wallet and embark on the Stellar Journey, please install the MetaMask extension or open this application in a Web3-compatible mobile browser.</p>
+      </div>
+      <div class="modal-actions">
+        <a href="https://metamask.io/download/" target="_blank" class="btn btn-primary btn-glow text-center">Install MetaMask</a>
+        <button id="modal-close-action" class="btn btn-secondary">Close Console</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
